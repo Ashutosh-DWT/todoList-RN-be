@@ -3,6 +3,8 @@ import User from "./routers/User.js";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 import cors from "cors";
+
+
 export const app = express();
 
 app.use(express.json());
