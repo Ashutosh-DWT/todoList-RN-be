@@ -2,7 +2,7 @@ import express from "express";
 import User from "./routers/User.js";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
-import cors from "cors"
+import cors from "cors";
 export const app = express();
 
 app.use(express.json());
@@ -15,4 +15,8 @@ app.use(
     useTempFiles: true,
   })
 );
-app.use(cors())
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("server running successfully!");
+});
