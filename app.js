@@ -10,7 +10,7 @@ export const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use("/api/v1", User);
+app.use("/", User);
 app.use(
   fileUpload({
     limits: { fileSize: 500 * 1024 * 1024 },
