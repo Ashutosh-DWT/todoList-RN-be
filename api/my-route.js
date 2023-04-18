@@ -1,2 +1,4 @@
 import { app } from "../app";
-module.exports = app;
+import router from "../routers/User";
+app.use("/api/", router);
+export { app };
