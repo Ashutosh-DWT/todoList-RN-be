@@ -15,7 +15,7 @@ import {
 } from "../controllers/User.js";
 import { isAuthenticated } from "../middleware/auth.js";
 import multer from "multer";
-const upload = multer({ dest: "temp" });
+const upload = multer({ dest: "tmp" });
 const router = express.Router();
 
 router.route("/register").post(upload.single("avatar"), register);
